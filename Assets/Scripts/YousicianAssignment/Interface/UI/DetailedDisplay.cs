@@ -10,7 +10,7 @@ namespace YousicianAssignment.Interface.UI
 
         public void Display(ProgramInfo info)
         {
-            
+            text.text = info.ToString();
         }
     }
 }

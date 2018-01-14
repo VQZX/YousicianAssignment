@@ -12,14 +12,19 @@ namespace YousicianAssignment.Interface
         [SerializeField]
         protected UiManager uiManager;
 
-        public void UpdateList()
+        public void AppendList()
         {
-            requester.UpdateList();;
+            requester.UpdateList();
         }
         
         public void UpdateListDisplay(ProgramInfo [] list)
         {
             uiManager.DisplayList(list);
+        }
+
+        public void RequestQuery(string query)
+        {
+            requester.Search(query);
         }
     }
 }

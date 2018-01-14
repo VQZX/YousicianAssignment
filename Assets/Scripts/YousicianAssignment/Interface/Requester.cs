@@ -42,14 +42,13 @@ namespace YousicianAssignment.Interface
             {
                 mediator.UpdateListDisplay(data.ToArray());
             }
-
             listLength += increaseAmount;
         }
 
         private void OnDataRecieved(SearchQueryParser parser)
         {
             result = parser;
-            Debug.Log(parser.Data);
+            UpdateList();
         }
     }
 }

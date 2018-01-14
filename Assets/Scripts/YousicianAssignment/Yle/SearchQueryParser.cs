@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 
 namespace YousicianAssignment.Yle
 {
@@ -15,13 +16,12 @@ namespace YousicianAssignment.Yle
 
         public ArrayList GetSubList(int length)
         {
-            //TODO: check for possible values  ending
             ArrayList list = new ArrayList(length);
-            for (int i = 0; i < length; i++)
+            int min = Mathf.Min(length, dataLength);
+            for (int i = 0; i < min; i++)
             {
                 list.Add(body[i]);
             }
-
             return list;
         }
     }

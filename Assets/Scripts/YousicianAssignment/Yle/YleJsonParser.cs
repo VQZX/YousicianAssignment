@@ -23,7 +23,8 @@ namespace YousicianAssignment.Yle
         /// The hashtable containing the meta information
         /// </summary>
         protected Hashtable meta;
-        
+
+        protected int dataLength;
         
         public YleJsonParser(string json, bool caseSensitive)
         {
@@ -32,6 +33,8 @@ namespace YousicianAssignment.Yle
 
             body = (ArrayList)hashtable["data"];
             meta = (Hashtable)hashtable["meta"];
+            string dataValue = (string) meta["count"];
+            dataLength = int.Parse(dataValue);
         }
     }
 }

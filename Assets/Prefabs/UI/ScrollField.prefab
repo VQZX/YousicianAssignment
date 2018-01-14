@@ -165,8 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61422d30bd346c8b7589831e39a40fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 1406255547914254, guid: d48ef5f89ef59ad47befa43cbbd17de6,
+  buttonPrefab: {fileID: 114700821096963586, guid: d48ef5f89ef59ad47befa43cbbd17de6,
     type: 2}
+  content: {fileID: 224853635797449272}
+  poolAmount: 50
 --- !u!114 &114504957113924172
 MonoBehaviour:
   m_ObjectHideFlags: 1

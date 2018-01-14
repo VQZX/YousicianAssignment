@@ -3,7 +3,7 @@
     public class YleGet
     {
         private const string SEARCH_PRORGAMS =
-            "https://external.api.yle.fi/v1/programs/items.json?q={2}&limit=1&app_key={0}&app_id={1}";
+            "https://external.api.yle.fi/v1/programs/items.json?q={2}&app_key={0}&app_id={1}";
 
         private string appId;
         private string appKey;

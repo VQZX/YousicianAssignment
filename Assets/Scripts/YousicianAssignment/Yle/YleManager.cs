@@ -44,6 +44,7 @@ namespace YousicianAssignment.Yle
                 else
                 {
                     // Show results as text
+                    Debug.Log("Data Recived: "+www.downloadHandler.text);
                     if (DataRecieved != null)
                     {
                         SearchQueryParser parser = new SearchQueryParser(www.downloadHandler.text, false);
