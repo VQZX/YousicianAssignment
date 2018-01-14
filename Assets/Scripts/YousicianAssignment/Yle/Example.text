@@ -1,0 +1,250 @@
+"data": [
+	{
+	    "alternativeId": [
+		"12-1022-4-253311"
+	    ],
+	    "audio": [
+		{
+		    "format": [
+			{
+			    "inScheme": "mediaformat-classification",
+			    "key": "stereo",
+			    "type": "Concept"
+			}
+		    ],
+		    "language": [
+			"fi"
+		    ],
+		    "type": "AudioTrack"
+		}
+	    ],
+	    "collection": "main",
+	    "contentRating": {
+		"reason": [],
+		"title": {}
+	    },
+	    "countryOfOrigin": [],
+	    "creator": [],
+	    "description": {
+		"fi": "Mitä on lohturuoka? Milloin sana ilmestyi ensimmäisen kerran lehtien palstoille? Toimittaja Kaisa Pulakka pohtii lohturuoan olemusta. Lohturuoka liittyy lapsuuteen ja siinä maistuu nostalgia.\r\n\r\nLohturuoka voi myös toimia siltana menneeseen. The Sopranos TV-sarjassa ruoka vahvistaa italialaista identiteettiä. Ohjelmasta selviää myös, millaisia lohturuoan popsijoita ovat Viisikoiden lapset, Nalle Puh ja Tove Janssonin Muumi-hahmot.\r\n\r\nToimittajana Kaisa Pulakka. Lukijana Pietari Kylmälä."
+	    },
+	    "duration": "PT19M21S",
+	    "id": "1-2700948",
+	    "image": {
+		"available": true,
+		"id": "13-1-2700948",
+		"type": "ImageObject"
+	    },
+	    "indexDataModified": "2015-06-01T09:14:07.142+03:00",
+	    "itemTitle": {
+		"fi": "Nalle Puh, Muumit ja Sopranosit syövät lohturuokaa"
+	    },
+	    "originalTitle": {},
+	    "partOfSeries": {
+		"availabilityDescription": {
+		    "fi": "Maanantaisin klo 17.40."
+		},
+		"countryOfOrigin": [],
+		"coverImage": {
+		    "available": true,
+		    "id": "13-1-2704918-cover",
+		    "type": "ImageObject"
+		},
+		"creator": [],
+		"description": {
+		    "fi": "\"Minuun iski ruoka-ahdistus. Tuntui, että lähikaupasta ei voi enää ostaa mitään.\" Ruoka on jatkuvasti tapetilla niin perinteisessä kuin sosiaalisessakin mediassa. Ruoka ja syöminen näyttäytyvät portteina henkiseen hyvinvointiin, mutta jatkuva ruokahypetys voi myös aiheuttaa pahoinvointia. Toimittaja Kaisa Pulakka peilaa sarjassa ajatuksiaan kulttuurihistoriaan. 12-osainen radioesseiden sarja."
+		},
+		"id": "1-2704918",
+		"image": {
+		    "available": true,
+		    "id": "13-1-2704918",
+		    "type": "ImageObject"
+		},
+		"interactions": [
+		    {
+			"title": {
+			    "fi": "Yle Areena Ruoka-Suomi"
+			},
+			"type": "WebPage",
+			"url": "http://areena.yle.fi/tv/2417961"
+		    },
+		    {
+			"title": {
+			    "fi": "Yle Kulttuuri"
+			},
+			"type": "WebPage",
+			"url": "http://yle.fi/aihe/kulttuuri"
+		    },
+		    {
+			"title": {
+			    "fi": "Yle Ruoka"
+			},
+			"type": "WebPage",
+			"url": "http://yle.fi/aihe/ruoka"
+		    },
+		    {
+			"title": {
+			    "fi": "Syödään ensin! Ohjelman oma sivu"
+			},
+			"type": "WebPage",
+			"url": "http://yle.fi/aihe/ohjelma/syodaan-ensin"
+		    }
+		],
+		"subject": [
+		    {
+			"broader": {
+			    "id": "5-218"
+			},
+			"id": "5-217",
+			"inScheme": "areena-content-classification",
+			"key": "kulttuuri",
+			"title": {
+			    "fi": "Kulttuuri",
+			    "sv": "Kulturprogram"
+			},
+			"type": "Concept"
+		    },
+		    {
+			"id": "5-263",
+			"inScheme": "areena-analytics-classification",
+			"key": "kulttuuri",
+			"title": {
+			    "fi": "Kulttuuri"
+			},
+			"type": "Concept"
+		    }
+		],
+		"title": {
+		    "fi": "Syödään ensin!"
+		},
+		"type": "RadioSeries"
+	    },
+	    "publicationEvent": [
+		{
+		    "duration": "PT19M22S",
+		    "endTime": "2015-05-09T23:04:26+03:00",
+		    "id": "4-4229816",
+		    "media": {},
+		    "region": "World",
+		    "service": {
+			"id": "yle-radio-1"
+		    },
+		    "startTime": "2015-05-09T22:45:04+03:00",
+		    "temporalStatus": "in-past",
+		    "type": "ScheduledTransmission"
+		},
+		{
+		    "duration": "PT19M21S",
+		    "endTime": "2015-05-04T18:00:07+03:00",
+		    "id": "4-4211782",
+		    "media": {},
+		    "region": "World",
+		    "service": {
+			"id": "yle-radio-1"
+		    },
+		    "startTime": "2015-05-04T17:40:46+03:00",
+		    "temporalStatus": "in-past",
+		    "type": "ScheduledTransmission"
+		},
+		{
+		    "duration": "P1MT14H44M59S",
+		    "endTime": "2015-06-04T23:59:59+03:00",
+		    "id": "4-4360824",
+		    "media": {
+			"available": true,
+			"contentProtection": [
+			    {
+				"id": "22-0",
+				"type": "ContentProtectionPolicy"
+			    }
+			],
+			"downloadable": false,
+			"duration": "PT19M24S",
+			"id": "6-ef0f1296ffaa4c94873e94bfb15a7214",
+			"type": "AudioObject"
+		    },
+		    "publisher": [
+			{
+			    "id": "yle-radio-1"
+			}
+		    ],
+		    "region": "Finland",
+		    "service": {
+			"id": "yle-areena"
+		    },
+		    "startTime": "2015-05-04T09:15:00+03:00",
+		    "temporalStatus": "currently",
+		    "type": "OnDemandPublication"
+		}
+	    ],
+	    "subject": [
+		{
+		    "broader": {
+			"id": "5-200"
+		    },
+		    "id": "5-218",
+		    "inScheme": "areena-content-classification",
+		    "key": "faktajakulttuuri",
+		    "title": {
+			"fi": "Fakta ja Kulttuuri",
+			"sv": "Fakta och kultur"
+		    },
+		    "type": "Concept"
+		},
+		{
+		    "broader": {
+			"id": "5-218"
+		    },
+		    "id": "5-217",
+		    "inScheme": "areena-content-classification",
+		    "key": "kulttuuri",
+		    "title": {
+			"fi": "Kulttuuri",
+			"sv": "Kulturprogram"
+		    },
+		    "type": "Concept"
+		},
+		{
+		    "id": "5-263",
+		    "inScheme": "areena-analytics-classification",
+		    "key": "kulttuuri",
+		    "title": {
+			"fi": "Kulttuuri"
+		    },
+		    "type": "Concept"
+		},
+		{
+		    "id": "21-4",
+		    "inScheme": "finnpanel-genre-classification",
+		    "notation": [
+			{
+			    "value": "3.2",
+			    "valueType": "finnpanel-notation"
+			}
+		    ],
+		    "title": {
+			"en": "Cultural",
+			"fi": "Kulttuuriohjelmat"
+		    },
+		    "type": "Concept"
+		}
+	    ],
+	    "subtitling": [],
+	    "title": {
+		"fi": "Syödään ensin!: Nalle Puh, Muumit ja Sopranosit syövät lohturuokaa"
+	    },
+	    "type": "RadioProgram",
+	    "typeCreative": "Program",
+	    "typeMedia": "RadioContent",
+	    "video": {}
+	}
+    ],
+    "meta": {
+	"clip": 8,
+	"count": 59,
+	"limit": "1",
+	"offset": "0",
+	"program": 51,
+	"q": "muumit"
+    }
+}
