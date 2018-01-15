@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using YousicianAssignment.Interface.UI;
 using YousicianAssignment.Yle;
+using YousicianAssignment.Yle.Json;
 
 namespace YousicianAssignment.Interface
 {
@@ -49,6 +50,12 @@ namespace YousicianAssignment.Interface
         {
             result = parser;
             UpdateList();
+
+            YleManager manager;
+            if (YleManager.TryGetInstance(out manager))
+            {
+                manager.DataRecieved -= OnDataRecieved;
+            }
         }
     }
 }

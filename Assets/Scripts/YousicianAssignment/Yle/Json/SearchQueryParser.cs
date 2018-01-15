@@ -1,15 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace YousicianAssignment.Yle
+namespace YousicianAssignment.Yle.Json
 {
     public class SearchQueryParser : YleJsonParser
     {
-        #region Property Names
-        private const string ITEM_TITLE = "itemTitle";
-        #endregion
-        
-        
         public SearchQueryParser(string json, bool caseSensitive) : base(json, caseSensitive)
         {
         }
