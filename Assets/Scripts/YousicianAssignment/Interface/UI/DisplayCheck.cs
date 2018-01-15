@@ -51,7 +51,7 @@ namespace YousicianAssignment.Interface.UI
             Rect maskRect = mask.rect;
             maskRect.position += (Vector2)mask.position;
             // Is the button on the threshold
-            if (rect.yMax > maskRect.yMin && rect.yMin < maskRect.yMin )
+            if (rect.yMax > maskRect.yMin )
             {
                 ButtonDisplayed();
             }

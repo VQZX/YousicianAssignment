@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
-using YousicianAssignment.Interface.UI;
 using YousicianAssignment.Yle;
 using YousicianAssignment.Yle.Json;
 
