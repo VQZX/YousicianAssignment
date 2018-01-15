@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 using OrbCreationExtensions;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ namespace YousicianAssignment.Interface
         public ArrayList CountryOfOrigin { get; protected set; }
         public ArrayList Creator { get; protected set; }
         
-        public string Subject { get; protected set; }
+        public ArrayList Subjects { get; protected set; }
         
         public string Type { get; protected set; }
 
@@ -28,45 +29,62 @@ namespace YousicianAssignment.Interface
             Description = (string)((Hashtable)this.table["description"])["fi"];
             CountryOfOrigin = (ArrayList) (this.table["countryOfOrigin"]);
             Creator = (ArrayList) (this.table["creator"]);
-            ArrayList subjects = (ArrayList) this.table["subject"];
-            foreach (var subject in subjects)
-            {
-                Hashtable hash = (Hashtable) subject;
-                if (hash.ContainsKey("key"))
-                {
-                    Subject = (string)hash["key"];
-                    break;
-                }
-            }
-
-            Type = (string) ((Hashtable) this.table)["type"];
+            Subjects = (ArrayList) this.table["subject"];
+            Type = (string) this.table["type"];
         }
 
         public override string ToString()
         {
-            string output = "Title: "+ItemTitle + "\n";
-            output += "Country of Origin: ";
+            StringBuilder builder = new StringBuilder();
+
+            string output = "Title: " + ItemTitle;
+            builder.AppendLine("Title: " + ItemTitle);
+            builder.AppendLine();
+            output = "Country of Origin: ";
             foreach (var country in CountryOfOrigin)
             {
                 output += country + " ";
             }
 
-            output += "Creator: ";
+            builder.AppendLine(output);
+            builder.AppendLine();
+            output = "Creator: ";
+            string creators = string.Empty;
             if (Creator.Count > 0)
             {
                 foreach (var creator in Creator)
                 {
-                    output += ((Hashtable)creator)["name"] + " ";
+                    string current = (string)((Hashtable) creator)["name"];
+                    creators += string.Format("{0} {1}", creators, current);
                 }
             }
 
-            output += "\nDescription: " + Description + "\n";
+            output += creators;
+            builder.AppendLine(output);
+            builder.AppendLine();
 
-            output += "Subject: "+Subject + "\n";
+            output = "Description: " + Description;
+            builder.AppendLine(output);
+            builder.AppendLine();
 
-            output += "Type: "+Type + "\n";
+            output = "Subject: ";
+            StringBuilder subjectsBuilder = new StringBuilder();
+            foreach (var subject in Subjects)
+            {
+                string current = (string)((Hashtable) subject)["key"];
+                if ( !string.IsNullOrEmpty(current) && !subjectsBuilder.ToString().Contains(current))
+                {
+                    subjectsBuilder.Append(current + ", ");
+                }
+            }
 
-            return output;
+            builder.Append(output);
+            builder.AppendLine(subjectsBuilder.ToString());
+            builder.AppendLine();
+            output = "Type: " + Type;
+            builder.Append(output);
+
+            return builder.ToString();
         }
     }
 }

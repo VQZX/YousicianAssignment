@@ -5,7 +5,7 @@ namespace YousicianAssignment.Interface.UI
     public class Spinner : MonoBehaviour
     {
         [SerializeField]
-        protected new Animator animator;
+        protected Animator animator;
 
         [SerializeField]
         protected string playParam = "Play";
