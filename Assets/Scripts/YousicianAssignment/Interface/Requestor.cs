@@ -59,10 +59,10 @@ namespace YousicianAssignment.Interface
                 data.Add(datum);
             }
 
-            Mediator mediator;
-            if (Mediator.TryGetInstance(out mediator))
+            AppManager appManager;
+            if (AppManager.TryGetInstance(out appManager))
             {
-                mediator.UpdateListDisplay(data.ToArray());
+                appManager.UpdateListDisplay(data.ToArray());
             }
             listLength += increaseAmount;
         }

@@ -14,6 +14,12 @@ namespace YousicianAssignment.Yle
     public class YleManager : PersistentSingleton<YleManager>
     {
         /// <summary>
+        /// The maximum amount of results recievable
+        /// </summary>
+        [SerializeField]
+        protected int maxResults = 100;
+        
+        /// <summary>
         /// The broacast event for when the data has been recived
         /// </summary>
         public event Action<SearchQueryParser> DataRecieved;
@@ -48,7 +54,7 @@ namespace YousicianAssignment.Yle
         /// </summary>
         protected void Start()
         {
-            yleApiQueryFormatterFormatter = new YleApiQueryFormatter(APP_ID, APP_KEY);
+            yleApiQueryFormatterFormatter = new YleApiQueryFormatter(APP_ID, APP_KEY, maxResults);
         }
             
         /// <summary>

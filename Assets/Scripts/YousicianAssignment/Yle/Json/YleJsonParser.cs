@@ -15,11 +15,6 @@ namespace YousicianAssignment.Yle.Json
         protected readonly ArrayList body;
 
         /// <summary>
-        /// The hashtable containing the meta information
-        /// </summary>
-        private readonly Hashtable meta;
-
-        /// <summary>
         /// The amount of data points available
         /// </summary>
         protected readonly int dataLength;
@@ -33,9 +28,7 @@ namespace YousicianAssignment.Yle.Json
             var hashtable = SimpleJsonImporter.Import(data, caseSensitive);
 
             body = (ArrayList)hashtable["data"];
-            meta = (Hashtable)hashtable["meta"];
-            string dataValue = (string) meta["count"];
-            dataLength = int.Parse(dataValue);
+            dataLength = body.Count;
         }
     }
 }

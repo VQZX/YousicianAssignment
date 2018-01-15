@@ -7,19 +7,37 @@ namespace YousicianAssignment.Interface.UI
 {
     public class ScrollList : MonoBehaviour
     {
+        /// <summary>
+        /// The template of the buttons to display
+        /// </summary>
         [SerializeField]
         protected DisplayButton buttonPrefab;
 
+        /// <summary>
+        /// The parent of the scrollable items
+        /// </summary>
         [SerializeField]
         protected Transform content;
 
+        /// <summary>
+        /// The size of the pool for all the instantiated items
+        /// </summary>
         [SerializeField]
         protected int poolAmount = 50;
 
+        /// <summary>
+        /// The current amount of items activated
+        /// </summary>
         public int CurrentActivatedAmount { get; protected set; }
         
+        /// <summary>
+        /// The controller for all the pool items
+        /// </summary>
         private DisplayButtonPool pool;
         
+        /// <summary>
+        /// Display everything in the recived list
+        /// </summary>
         public void Display(ProgramInfo [] list)
         {
             CurrentActivatedAmount = list.Length;
@@ -33,31 +51,12 @@ namespace YousicianAssignment.Interface.UI
             }
         }
 
+        /// <summary>
+        /// Initialise the pool controller
+        /// </summary>
         protected virtual void Awake()
         {
             pool = new DisplayButtonPool(poolAmount, buttonPrefab, content);
-        }
-
-        private void AddButtons(int amount)
-        {
-            pool.Add(amount);
-        }
-
-
-        private void ResetPool()
-        {
-            pool.Reset();;
-        }
-        
-        private static void LogNames(ProgramInfo[] list)
-        {
-            string output = string.Empty;
-            foreach (var info in list)
-            {
-                output = string.Format("{0}\n{1}", output, info.ItemTitle);
-            }
-
-            Debug.Log(output);
         }
     }
 }

@@ -3,37 +3,31 @@ using UnityEngine.UI;
 
 namespace YousicianAssignment.Interface.UI
 {
+    /// <summary>
+    /// A button handling input for displaying detail information
+    /// </summary>
     [RequireComponent(typeof(Button))]
     public class DisplayButton : MonoBehaviour
     {
+        /// <summary>
+        /// The attached text component
+        /// </summary>
         [SerializeField]
         protected Text text;
 
+        /// <summary>
+        /// The attached button component
+        /// </summary>
         private Button button;
 
-        private RectTransform mask;
-
-        private RectTransform rectTransform;
-
-        public bool Active
-        {
-            get { return gameObject.activeSelf; }
-        }
-
-        private int orderInList;
-
+        /// <summary>
+        /// The program info assigned to this button
+        /// </summary>
         protected ProgramInfo assignedInfo;
         
-        public void SetData(ProgramInfo info)
-        {
-            if (text == null)
-            {
-                text = GetComponent<Text>();
-            }
-            assignedInfo = info;
-            text.text = info.ItemTitle;
-        }
-
+        /// <summary>
+        /// Activate the button with the assigned info
+        /// </summary>
         public void Activate(ProgramInfo info = null)
         {
             SetData(info ?? assignedInfo);
@@ -43,44 +37,29 @@ namespace YousicianAssignment.Interface.UI
                 button = GetComponent<Button>();
             }
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(OnClick);
-            orderInList = transform.GetSiblingIndex();
-            if (mask == null)
+            button.onClick.AddListener(OnClick);  
+        }
+        
+        /// <summary>
+        /// Assing the program info and activate the button
+        /// </summary>
+        /// <param name="info"></param>
+        private void SetData(ProgramInfo info)
+        {
+            if (text == null)
             {
-                mask = (RectTransform)GetComponentInParent<Mask>().transform;
+                text = GetComponent<Text>();
             }
-
-            if (rectTransform == null)
-            {
-                rectTransform = (RectTransform) transform;
-            }
+            assignedInfo = info;
+            text.text = info.ItemTitle;
         }
 
+        /// <summary>
+        /// Deactivate the button
+        /// </summary>
         public void Deactivate()
         {
             gameObject.SetActive(false);
-        }
-
-        protected virtual void Update()
-        {
-            Rect rect = rectTransform.rect;
-            rect.position += (Vector2)rectTransform.position;
-            Rect maskRect = mask.rect;
-            maskRect.position += (Vector2)mask.position;
-            // Is the button on the threshold
-            if (rect.yMax > maskRect.yMin && rect.yMin < maskRect.yMin )
-            {
-                ButtonDisplayed();
-            }
-        }
-
-        private void ButtonDisplayed()
-        {
-            UiManager manager;
-            if (UiManager.TryGetInstance(out manager))
-            {
-                manager.ButtonDisplayed(orderInList);
-            }
         }
 
         private void OnClick()
