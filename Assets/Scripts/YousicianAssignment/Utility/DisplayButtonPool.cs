@@ -12,6 +12,9 @@ namespace YousicianAssignment.Utility
         {
         }
         
+        /// <summary>
+        /// Creates the object, and deactivates by default
+        /// </summary>
         protected override void CreateObject()
         {
             DisplayButton current = Object.Instantiate(Prefab, Parent);
@@ -20,6 +23,9 @@ namespace YousicianAssignment.Utility
             pool.Add(current);
         }
 
+        /// <summary>
+        /// Deactivates all the objects in the pool
+        /// </summary>
         public virtual void Reset()
         {
             foreach (var current in pool)
