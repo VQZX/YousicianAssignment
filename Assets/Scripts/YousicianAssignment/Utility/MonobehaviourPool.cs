@@ -35,6 +35,7 @@ namespace YousicianAssignment.Utility
         protected virtual void CreateObject()
         {
             T current = Object.Instantiate(Prefab, Parent);
+            current.gameObject.name = string.Format("{0} {1}", current.gameObject.name, pool.Count);
             pool.Add(current);
         }
 

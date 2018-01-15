@@ -15,11 +15,15 @@ namespace YousicianAssignment.Interface.UI
         protected DetailedDisplay display;
 
         [SerializeField]
+        protected Spinner uiSpinner;
+
+        [SerializeField]
         protected int activateDifference = 5;
 
         public void DisplayList(ProgramInfo [] info)
         {
             scrollList.Display(info);
+            uiSpinner.Deactivate();
         }
 
         public void DisplayDetails(ProgramInfo info)
@@ -42,12 +46,13 @@ namespace YousicianAssignment.Interface.UI
             }
         }
         
-        public static void Send(string send)
+        public void Send(string send)
         {
             Mediator mediator;
             if (Mediator.TryGetInstance(out mediator))
             {
                 mediator.RequestQuery(send);   
+                uiSpinner.Activate();
             }
         }
     }

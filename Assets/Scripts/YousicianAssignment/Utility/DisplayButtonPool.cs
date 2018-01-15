@@ -15,6 +15,7 @@ namespace YousicianAssignment.Utility
         protected override void CreateObject()
         {
             DisplayButton current = Object.Instantiate(Prefab, Parent);
+            current.gameObject.name = string.Format("{0} {1}", current.gameObject.name, pool.Count);
             current.Deactivate();
             pool.Add(current);
         }

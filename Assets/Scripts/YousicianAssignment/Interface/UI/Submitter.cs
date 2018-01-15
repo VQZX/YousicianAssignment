@@ -12,22 +12,26 @@ namespace YousicianAssignment.Interface.UI
         protected InputField field;
 
         [SerializeField]
-        protected string dummySubmit;
+        protected KeyCode submitKey;
 
-        [SerializeField]
-        protected bool useDummy;
-
-        public void Submit()
+        protected virtual void Awake()
         {
-            Send(field.text);
+            button.onClick.AddListener(Submit);
         }
 
-        protected virtual void Start()
+        protected virtual void Update()
         {
-            if (useDummy)
+            bool hit = Input.GetKeyDown(submitKey);
+            if (!hit)
             {
-                Send(dummySubmit);
+                return;
             }
+            Submit();
+        }
+        
+        private void Submit()
+        {
+            Send(field.text);
         }
 
         private static void Send(string send)
@@ -35,7 +39,7 @@ namespace YousicianAssignment.Interface.UI
             UiManager manager;
             if (UiManager.TryGetInstance(out manager))
             {
-                UiManager.Send(send);
+                manager.Send(send);
             }
         }
     }

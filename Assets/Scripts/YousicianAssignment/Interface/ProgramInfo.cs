@@ -35,15 +35,16 @@ namespace YousicianAssignment.Interface
                 if (hash.ContainsKey("key"))
                 {
                     Subject = (string)hash["key"];
-                    Type = (string) hash["type"];
                     break;
                 }
             }
+
+            Type = (string) ((Hashtable) this.table)["type"];
         }
 
         public override string ToString()
         {
-            string output = ItemTitle + "\n";
+            string output = "Title: "+ItemTitle + "\n";
             output += "Country of Origin: ";
             foreach (var country in CountryOfOrigin)
             {
@@ -51,16 +52,19 @@ namespace YousicianAssignment.Interface
             }
 
             output += "Creator: ";
-            foreach (var creator in Creator)
+            if (Creator.Count > 0)
             {
-                output += creator + " ";
+                foreach (var creator in Creator)
+                {
+                    output += ((Hashtable)creator)["name"] + " ";
+                }
             }
 
-            output += "\n" + Description + "\n";
+            output += "\nDescription: " + Description + "\n";
 
-            output += Subject + "\n";
+            output += "Subject: "+Subject + "\n";
 
-            output += Type + "\n";
+            output += "Type: "+Type + "\n";
 
             return output;
         }

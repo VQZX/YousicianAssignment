@@ -63,11 +63,19 @@ namespace YousicianAssignment.Interface.UI
 
         protected virtual void Update()
         {
-            if (!mask.rect.Contains(rectTransform.position))
+            Rect rect = rectTransform.rect;
+            rect.position += (Vector2)rectTransform.position;
+            Rect maskRect = mask.rect;
+            maskRect.position += (Vector2)mask.position;
+            // Is the button on the threshold
+            if (rect.yMax > maskRect.yMin && rect.yMin < maskRect.yMin )
             {
-                return;
+                ButtonDisplayed();
             }
+        }
 
+        private void ButtonDisplayed()
+        {
             UiManager manager;
             if (UiManager.TryGetInstance(out manager))
             {
