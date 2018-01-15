@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using YousicianAssignment.Utility;
 
 namespace YousicianAssignment.Interface.UI
@@ -18,6 +19,12 @@ namespace YousicianAssignment.Interface.UI
         /// </summary>
         [SerializeField]
         protected Transform content;
+
+        /// <summary>
+        /// The attached scroll rect
+        /// </summary>
+        [SerializeField]
+        protected ScrollRect scrollRect;
 
         /// <summary>
         /// The size of the pool for all the instantiated items
@@ -49,6 +56,12 @@ namespace YousicianAssignment.Interface.UI
             {
                 pool[i].Activate(list[i]);
             }
+        }
+
+        public void ResetScroll()
+        {
+            pool.Reset();
+            scrollRect.verticalNormalizedPosition = 0;
         }
 
         /// <summary>

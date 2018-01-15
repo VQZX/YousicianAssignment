@@ -76,6 +76,9 @@ namespace YousicianAssignment.Interface.UI
                 appManager.RequestQuery(send);   
                 uiSpinner.Activate();
             }
+            
+            scrollList.ResetScroll();
+            display.ResetDisplay();
         }
     }
 }

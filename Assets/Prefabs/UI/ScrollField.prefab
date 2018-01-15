@@ -169,6 +169,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 114700821096963586, guid: d48ef5f89ef59ad47befa43cbbd17de6,
     type: 2}
   content: {fileID: 224853635797449272}
+  scrollRect: {fileID: 114257156654145698}
   poolAmount: 50
 --- !u!114 &114504957113924172
 MonoBehaviour:
@@ -214,7 +215,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 30
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -307,7 +308,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 512, y: 0}
+  m_SizeDelta: {x: 768.3, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224217761535205516
 RectTransform:
@@ -325,8 +326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -57.4}
-  m_SizeDelta: {x: 0, y: -78.5}
+  m_AnchoredPosition: {x: 0, y: -38.5}
+  m_SizeDelta: {x: 0, y: -74.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224642439827670828
 RectTransform:
@@ -344,8 +345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.9, y: -11.3}
-  m_SizeDelta: {x: 432.1, y: 673.4}
+  m_AnchoredPosition: {x: -0.2000122, y: 5.7}
+  m_SizeDelta: {x: 630.7, y: 960.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224819122974612170
 RectTransform:
