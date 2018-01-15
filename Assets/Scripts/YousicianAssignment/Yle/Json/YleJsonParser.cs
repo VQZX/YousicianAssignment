@@ -5,11 +5,6 @@ namespace YousicianAssignment.Yle.Json
     public class YleJsonParser
     {
         /// <summary>
-        /// The json string
-        /// </summary>
-        private readonly string data;
-
-        /// <summary>
         /// The hashtable containing the necessary info
         /// </summary>
         protected readonly ArrayList body;
@@ -24,8 +19,7 @@ namespace YousicianAssignment.Yle.Json
         /// </summary>
         protected YleJsonParser(string json, bool caseSensitive)
         {
-            data = json;
-            var hashtable = SimpleJsonImporter.Import(data, caseSensitive);
+            var hashtable = SimpleJsonImporter.Import(json, caseSensitive);
 
             body = (ArrayList)hashtable["data"];
             dataLength = body.Count;
