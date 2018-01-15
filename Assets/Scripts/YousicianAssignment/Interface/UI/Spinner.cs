@@ -18,8 +18,8 @@ namespace YousicianAssignment.Interface.UI
 
         public void Deactivate()
         {
-            gameObject.SetActive(false);
             animator.SetBool(playParam, false);
+            gameObject.SetActive(false);
         }
 
         protected virtual void Awake()
